@@ -40,6 +40,7 @@ public class PhoneBookRefactoredTests {
     @Test
     public void addTest1(){
         phoneBookRefactored.add("Josh Kelley","4439386064");
+        phoneBookRefactored.add("Josh Kelley","3415314314");
         phoneBookRefactored.add("Other Guy","3022018384");
         phoneBookRefactored.add("Lady","2158804335");
         int expected=3;
@@ -65,8 +66,6 @@ public class PhoneBookRefactoredTests {
 
     @Test
     public void reverseLookupTest0(){
-        phoneBookRefactored.add("Josh Kelley","4439386064");
-        phoneBookRefactored.add("Other Guy","3022018384");
         phoneBookRefactored.add("Lady","2158804335");
         String expected="Lady";
         String actual=phoneBookRefactored.reverseLookup("2158804335");
@@ -76,8 +75,6 @@ public class PhoneBookRefactoredTests {
     @Test
     public void reverseLookupTest1(){
         phoneBookRefactored.add("Josh Kelley","4439386064");
-        phoneBookRefactored.add("Other Guy","3022018384");
-        phoneBookRefactored.add("Lady","2158804335");
         String expected="Josh Kelley";
         String actual=phoneBookRefactored.reverseLookup("4439386064");
         assertEquals(expected,actual);
